@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CollectRecipeListApplication</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="listOfPurchases">Список покупок</string>
+    <string name="recipes">Список покупок</string>
+    <string name="redact_ingredient">Редактировать ингридиент</string>
+    <string name="delete_ingredient">Удалить ингридиент</string>
+    <string name="dish_name">Название блюда</string>
+    <string name="dish_ingredients">Ингридиенты</string>
+    <string name="update_menu_delete">Удалить</string>
+    <string name="update_menu_add_to_purchase_list">Добавить в список покупок</string>
+</resources>

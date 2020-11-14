@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="recipeItemViewModel"
+            type="com.android.example.collectrecipelistapplication.fragments.recipeItem.RecipeItemViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightYellow">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="185dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:srcCompat="@android:drawable/ic_dialog_info" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ingredientList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/list_margin"
+            app:layout_constraintBottom_toBottomOf="@id/addIngredientButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <ImageButton
+            android:id="@+id/addIngredientButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredientList"
+            app:layout_constraintEnd_toStartOf="@id/saveRecipeButton"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/colorAccent"
+            android:layout_margin="@dimen/list_margin"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveRecipeButton"
+            android:src="@android:drawable/ic_menu_save"
+            android:layout_margin="@dimen/list_margin"
+            app:layout_constraintStart_toEndOf="@id/addIngredientButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingredientList"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/colorAccent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

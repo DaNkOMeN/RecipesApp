@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recipeListFragment">
+
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.android.example.collectrecipelistapplication.fragments.recipeList.RecipeListFragment"
+        android:label="RecipeListFragment" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeItemFragment"
+            app:destination="@id/recipeItemFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_addRecipeFragment"
+            app:destination="@id/addRecipeFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_updateRecipeFragment"
+            app:destination="@id/updateRecipeFragment" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_unboughtPurchaseFragment"
+            app:destination="@id/unboughtPurchaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeItemFragment"
+        android:name="com.android.example.collectrecipelistapplication.fragments.recipeItem.RecipeItemFragment"
+        android:label="RecipeItemFragment" >
+        <argument
+            android:name="ingredientsList"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_recipeItemFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecipeFragment"
+        android:name="com.android.example.collectrecipelistapplication.fragments.addRecipe.AddRecipeFragment"
+        android:label="AddRecipe" >
+        <action
+            android:id="@+id/action_addRecipeFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRecipeFragment"
+        android:name="com.android.example.collectrecipelistapplication.fragments.updateRecipe.UpdateRecipeFragment"
+        android:label="UpdateRecipeFragment" >
+        <action
+            android:id="@+id/action_updateRecipeFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+        <argument
+            android:name="currentRecipe"
+            app:argType="com.android.example.collectrecipelistapplication.entities.Recipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/unboughtPurchaseFragment"
+        android:name="com.android.example.collectrecipelistapplication.fragments.undoughtPurchase.UnboughtPurchaseFragment"
+        android:label="UnboughtPurchaseFragment" >
+        <action
+            android:id="@+id/action_unboughtPurchaseFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+</navigation>
